@@ -3,3 +3,4 @@ echo 'deb http://download.opensuse.org/repositories/home:/ungoogled_chromium/Ubu
 curl -s 'https://download.opensuse.org/repositories/home:/ungoogled_chromium/Ubuntu_Focal/Release.key' | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home-ungoogled_chromium.gpg > /dev/null
 sudo apt update
 sudo apt install -y ungoogled-chromium
+#sudo apt install -y 
