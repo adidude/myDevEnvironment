@@ -12,9 +12,10 @@ git clone https://aur.archlinux.org/yay.git
 cd ./yay
 makepkg -si --noconfirm
 yay -S --noconfirm insomnia-bin nordvpn-bin
-gpasswd -a $USER nordvpn
+CURRUSER=$USER
+sudo gpasswd -a $CURRUSER nordvpn
 sudo flatpak install -y flathub com.github.tchx84.Flatseal com.discordapp.Discord
 sudo systemctl start docker.service
 sudo systemctl enable docker.service
 sudo systemctl enable --now nordvpnd
-# sudo  reboot
+sudo  reboot
