@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo apt update --fix-missing
-sudo apt upgrade
-sudo apt autoremove
-date > /home/adi/lastupdate
+mv /home/$USER/Logs/lastUpdateLog /home/$USER/Logs/lastUpdateLog.old
+date > /home/$USER/Logs/lastUpdateLog
+pacman -Syu --noconfirm >> /home/$USER/Logs/lastupdateLog
+yay
