@@ -11,7 +11,7 @@ cd /home/$USER/Utility
 git clone https://aur.archlinux.org/yay.git
 cd ./yay
 makepkg -si --noconfirm
-sudo yay -S --noconfirm insomnia-bin nordvpn-bin
+yay -S --noconfirm insomnia-bin nordvpn-bin
 gpasswd -a $USER nordvpn
 sudo flatpak install -y flathub com.github.tchx84.Flatseal com.discordapp.Discord
 sudo systemctl start docker.service
