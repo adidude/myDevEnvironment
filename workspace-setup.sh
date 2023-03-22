@@ -5,8 +5,8 @@ sudo pacman -Syu --noconfirm
 sudo pacman -S --needed --noconfirm base-devel
 sudo sed -i "/MAKEFLAGS=\"-j2\"/c\MAKEFLAGS=\"-j$(nproc)\"" /etc/makepkg.conf
 sudo pacman -S --noconfirm ncspot thunderbird code docker
-mkdir home/$USER/Utility
-mkdir home/$USER/Logs
+mkdir /home/$USER/Utility
+mkdir /home/$USER/Logs
 cd /home/$USER/Utility
 git clone https://aur.archlinux.org/yay.git
 cd ./yay
