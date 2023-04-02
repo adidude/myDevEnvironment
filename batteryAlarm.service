@@ -4,7 +4,7 @@ Description=Battery Alarm
 
 [Service]
 Type=oneshot
-ExecStart=/bin/bash /home/haven/Utility/myDevEnvironment/batteryAlarm.sh
+ExecStart=/bin/bash /home/user/Utility/myDevEnvironment/batteryAlarm.sh
 Environment="DISPLAY=:0"
 
 [Install]

@@ -1,5 +1,6 @@
 #!/bin/bash
 # TODO: Before running enable flatpak & AURs
+sudo sed -i "s/user/$USER" ./batteryAlarm.service
 cp ./batteryAlarm.service /home/$USER/.config/systemd/user/batteryAlarm.service
 cp ./batteryAlarm.timer /home/$USER/.config/systemd/user/batteryAlarm.timer
 sudo pacman -Syu --noconfirm
