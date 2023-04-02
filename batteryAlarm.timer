@@ -1,0 +1,11 @@
+#batteryAlarm.timer
+[Unit]
+Description=Runs the battery alarm every 5 minutes
+
+[Timer]
+OnBootSec=1 m
+OnUnitActiveSec=5 m
+Unit=batteryAlarm.service
+
+[Install]
+WantedBy=timers.target

@@ -1,7 +1,9 @@
 #!/bin/bash
-# TODO: Figure out how to only use 80% max battery
 # TODO: Before running enable flatpak & AURs
+cp ./batteryAlarm.service /home/$USER/.config/systemd/user/batteryAlarm.service
+cp ./batteryAlarm.timer /home/$USER/.config/systemd/user/batteryAlarm.timer
 sudo pacman -Syu --noconfirm
+systemctl --user enable batteryAlarm.timer
 sudo pacman -S --needed --noconfirm base-devel
 sudo sed -i "/MAKEFLAGS=\"-j2\"/c\MAKEFLAGS=\"-j$(nproc)\"" /etc/makepkg.conf
 sudo pacman -S --noconfirm ncspot thunderbird code docker
@@ -18,4 +20,4 @@ sudo flatpak install -y flathub com.github.tchx84.Flatseal com.discordapp.Discor
 sudo systemctl start docker.service
 sudo systemctl enable docker.service
 sudo systemctl enable --now nordvpnd
-sudo  reboot
+sudo reboot
