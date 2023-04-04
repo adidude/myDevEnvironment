@@ -14,7 +14,7 @@ cd /home/$USER/Utility
 git clone https://aur.archlinux.org/yay.git
 cd ./yay
 makepkg -si --noconfirm
-yay -S --noconfirm insomnia-bin nordvpn-bin
+yay -S --noconfirm insomnia-bin nordvpn-bin google-chrome
 CURRUSER=$USER
 sudo gpasswd -a $CURRUSER nordvpn
 sudo flatpak install -y flathub com.github.tchx84.Flatseal com.discordapp.Discord
