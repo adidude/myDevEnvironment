@@ -20,7 +20,6 @@ sudo pacman -S --noconfirm thunderbird code docker
 
 echo "(6/11) Installing yay..."
 mkdir /home/$USER/Utility
-mkdir /home/$USER/Logs
 cd /home/$USER/Utility
 git clone https://aur.archlinux.org/yay.git
 cd ./yay
